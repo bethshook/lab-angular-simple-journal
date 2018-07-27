@@ -17,4 +17,10 @@ export class JournalService {
     return this.http.get(this.url)
     .pipe(map((res:Response)=>res.json()));
 }
+
+  //get one entry
+  getEntry(id){
+    return this.http.get(this.url + id)
+    .pipe(map((res: Response)=>res.json()))
+  }
 }
